@@ -1,0 +1,46 @@
+{% extends "base2.html" %}
+
+{% block slides %}
+    {% for num_slide in dic_slides %}
+    
+        {% if num_slide >= 1 %}
+            <article class="slide" id="slide{{ num_slide }}">
+            <h1> {{ dic_slides[num_slide].titulo }}</h1>
+            <div class='grid_12' id='splash'>
+                <div class="box">
+                    {% for linha_conteudo in dic_slides[num_slide].conteudo %}
+                    {% set linha = dic_slides[num_slide].conteudo[linha_conteudo] %}
+                        {% if linha.tipo == 'img' %}
+                          <img src='img/{{ linha.valor }}' class='{{ linha.estilo }}' onclick="scaleToFullScreen()"></img>
+                        {% endif %}
+                        
+                        {% if linha.tipo == 'par' %}
+                          <p> {{ linha.valor }}</p>
+                        {% endif %}
+                        
+                        {% if linha.tipo == 'ite' %}
+                          <li> {{ linha.valor }} </li>
+                        {% endif %}
+                        
+                        {% if linha.tipo == 'vid' %}
+                          <video  width="880" height="600" controls>
+                           <source src= 'img/{{ linha.valor }}' type='video/ogg'>
+                          </video>
+                        {% endif %}
+                        
+                        {% if linha.tipo == 'com' %}
+                          <p class={{ linha.estilo }}> {{ linha.valor }}</p>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+             </div>
+             <div class='clear'> </div>
+              <div class= 'grid_24' id="rodape">
+                    <p> {{ num_slide }} / {{ dic_slides.0.num }} </p>
+            </div>
+            <div class='clear'> </div>
+            </article>
+        {% endif %}    
+    {% endfor %}
+{% endblock %}

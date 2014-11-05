@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/960_24_col.css" />
+
+       <title>%(titulo)s</title>
+       <script src="js/jquery-1.7.min.js" type="text/javascript"></script>
+       <script src="js/apresenta.js" type="text/javascript"></script>
+       <link rel="stylesheet" type="text/css" href="css/global.css">
+</head>
+<body>
+<div class="container_24">
+   <article class="slide_capa" id="slide1">
+    <div class="grid_4" id="splash">
+
+    </div>
+    <div class="grid_16" id="splash">
+          <h1 align='center'> %(titulo1)s</h1>
+          <h1 align='center'> %(titulo2)s </h1>
+          <p >%(autor)s</p>
+          <p >%(setor)s</p>
+    </div>
+    <div class="grid_4" id="splash">
+
+    </div>
+
+    <div class="clear" ></div>
+    </article>
+
+     %(slides)s
+        
+     <article class="slide_fim" id='slide%(num)s'>
+     <div class='grid_24' id="splash">
+        <h1 style="color: blue;"> Obrigado ...</h1>
+    </div>
+    <div class="clear"> </div>
+    </article>
+
+</div>
+
+
+</body>
+</html>
