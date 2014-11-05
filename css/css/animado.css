@@ -1,0 +1,36 @@
+#teste51 {
+    width:200px;
+    height:150px;
+    background:#FFFCA1;
+    border:1px solid #bbbbbb;
+    /*Transition*/
+    transition-property: width, height, background;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+
+    /* Firefox 4 */
+    -moz-transition-property:i width, height, background;
+    -moz-transition-duration:2s;
+    -moz-transition-timing-function:linear;
+    -moz-transition-delay:1s;
+
+    /* Safari and Chrome */
+    -webkit-transition-property: width, height, background;
+    -webkit-transition-duration:2s;
+    -webkit-transition-timing-function:linear;
+    -webkit-transition-delay:1s;
+
+    /* Opera */
+    -o-transition-property: width, height, background;
+    -o-transition-duration:2s;
+    -o-transition-timing-function:linear;
+    -o-transition-delay:1s;
+}
+
+
+#teste51:hover {
+    width: 870px;
+    height: 650px;
+    background: blue;
+}
